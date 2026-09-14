@@ -1,0 +1,25 @@
+CAPI=2:
+name: "akerlund::memory_reg:1.0.0"
+description: "Single-port register file"
+
+filesets:
+  rtl:
+    files:
+      - rtl/reg_sp_rf.sv
+    file_type: systemVerilogSource
+
+targets:
+  default:
+    filesets:
+      - rtl
+
+  rtl:
+    flow: lint
+    flow_options:
+      tool: verilator
+      verilator_options:
+        - -Wall
+        - -Wno-fatal
+    filesets:
+      - rtl
+    toplevel: reg_sp_rf
