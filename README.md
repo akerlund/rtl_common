@@ -1,6 +1,7 @@
 # rtl_common
 
 ![Verilator](https://img.shields.io/badge/Verilator-5.050-green)
+![Yosys](https://img.shields.io/badge/Yosys-0.69-green)
 ![FuseSoC](https://img.shields.io/badge/FuseSoC-2.4.6-blue)
 Shared RTL primitives. Every core here is a **leaf**: it instantiates nothing
 outside its own directory, so depending on this repository never drags in a
