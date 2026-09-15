@@ -1,0 +1,31 @@
+CAPI=2:
+name: "akerlund::clock_enable_scaler:1.0.0"
+description: "Clock enable scaler"
+
+filesets:
+  rtl:
+    files:
+      - rtl/clock_enable_scaler.sv
+    file_type: systemVerilogSource
+
+parameters:
+  COUNTER_WIDTH_P:
+    datatype: int
+    default: 32
+    paramtype: vlogparam
+
+targets:
+  default:
+    filesets:
+      - rtl
+
+  rtl:
+    flow: lint
+    flow_options:
+      tool: verilator
+      verilator_options:
+        - -Wall
+        - -Wno-fatal
+    filesets:
+      - rtl
+    toplevel: clock_enable_scaler
