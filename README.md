@@ -1,5 +1,8 @@
 # rtl_common
 
+![Verilator](https://img.shields.io/badge/Verilator-5.050-brightgreen)
+![FuseSoC](https://img.shields.io/badge/FuseSoC-2.4.6-brightgreen)
+
 Shared RTL primitives. Every core here is a **leaf**: it instantiates nothing
 outside its own directory, so depending on this repository never drags in a
 further dependency.
